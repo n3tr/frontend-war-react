@@ -11,13 +11,13 @@ class RepoHero extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     const {
       name,
       description,
       stargazers_count,
       open_issues_count,
-      fork_count
+      forks_count,
+      pull_requests_count
     } = this.state.repo
     return (
       <div>
@@ -27,8 +27,8 @@ class RepoHero extends React.Component {
         </p>
         <p className="card-text">Stars: {stargazers_count}</p>
         <p className="card-text">Open Issues: {open_issues_count}</p>
-        <p className="card-text">Forks: {fork_count}</p>
-        <p className="card-text">Pull Requests: x</p>
+        <p className="card-text">Forks: {forks_count}</p>
+        <p className="card-text">Pull Requests: {pull_requests_count}</p>
         <p className="lead">
           <a className="btn btn-primary btn-lg" href="stargazers.html" role="button">View allies</a>
         </p>
