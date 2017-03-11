@@ -7,3 +7,11 @@
 .stargazers > .col-3 {
   margin-bottom: 20px;
 }
+
+.stargazer {
+  margin-bottom: 20px;
+}
+
+.stargazer-image {
+  min-height: 100%;
+}
