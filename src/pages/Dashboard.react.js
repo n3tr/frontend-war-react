@@ -1,6 +1,6 @@
 import React from 'react'
-import RepoHero from './RepoHero.react'
-import RepoCard from './RepoCard.react'
+import RepoHero from '../components/RepoHero.react'
+import RepoCard from '../components/RepoCard.react'
 export default () => {
   return (
     <div className="container">
@@ -9,11 +9,11 @@ export default () => {
         <h1 className="display-3">Frontend War Room</h1>
         <p className="lead">Here you can find your allies and enemies</p>
         <hr className="my-4"/>
-        <RepoHero />
+        <RepoHero scopeName="facebook/react" />
       </div>
       <div className="row">
-        <RepoCard />
-        <RepoCard />
+        <RepoCard scopeName="vuejs/vue" />
+        <RepoCard scopeName="angular/angular" />
       </div>
     </div>
   )

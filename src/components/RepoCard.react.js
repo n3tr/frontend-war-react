@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 export default class RepoCard extends React.Component {
   render() {
     return (
@@ -14,7 +14,11 @@ export default class RepoCard extends React.Component {
             <p className="card-text">Pull Requests: x</p>
           </div>
           <div className="card-footer text-muted">
-            <a href="stargazers.html" className="btn btn-primary">View enemies</a>
+            <Link
+              to={`/stargazers/${this.props.scopeName}`}
+              className="btn btn-primary">
+              View enemies
+            </Link>
           </div>
         </div>
       </div>

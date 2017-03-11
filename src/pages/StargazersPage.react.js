@@ -1,5 +1,5 @@
 import React from 'react'
-import StargazerList from './StargazerList.react'
+import StargazerList from '../components/StargazerList.react'
 export default class StargazersPage extends React.Component {
   render() {
     return (
@@ -9,7 +9,6 @@ export default class StargazersPage extends React.Component {
           jQuery JavaScript Library
         </p>
         <StargazerList />
-
       </div>
     )
   }

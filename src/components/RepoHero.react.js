@@ -1,11 +1,12 @@
 import React from 'react'
 import { fetchRepository } from '../api'
+import { Link } from 'react-router-dom'
 
 class RepoHero extends React.Component {
   state = { repo: {} }
 
   componentDidMount() {
-    fetchRepository('facebook/react').then((repo) => {
+    fetchRepository(this.props.scopeName).then((repo) => {
       this.setState({ repo })
     })
   }
@@ -19,6 +20,7 @@ class RepoHero extends React.Component {
       forks_count,
       pull_requests_count
     } = this.state.repo
+    console.log(this.props);
     return (
       <div>
         <h2>The Greatness Project is <b>{name}</b></h2>
@@ -30,7 +32,12 @@ class RepoHero extends React.Component {
         <p className="card-text">Forks: {forks_count}</p>
         <p className="card-text">Pull Requests: {pull_requests_count}</p>
         <p className="lead">
-          <a className="btn btn-primary btn-lg" href="stargazers.html" role="button">View allies</a>
+          <Link
+            to={`/stargazers/${this.props.scopeName}`}
+            className="btn btn-primary btn-lg"
+            role="button">
+            View allies
+          </Link>
         </p>
       </div>
     )
