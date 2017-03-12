@@ -12,7 +12,6 @@ class RepoHero extends React.Component {
       forks_count = 0,
       pull_requests_count = 0
     } = this.props.repository
-    console.log(this.props);
     return (
       <div>
         <h2>The Greatness Project is <b>{name}</b></h2>

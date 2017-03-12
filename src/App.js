@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Route
 } from 'react-router-dom'
 import './App.css'
@@ -13,16 +13,16 @@ import StargazersPage from './pages/StargazersPage.react'
 class App extends Component {
   render() {
     return (
-      <Router>
+      <BrowserRouter basename="/frontend-war-react/">
         <div className="App">
             <AppHeader />
-            
-            <Route exact path="/" component={Dashboard} />
+
+            <Route path="/" exact component={Dashboard} />
             <Route
               path="/stargazers/:ownerName/:repoName"
               component={StargazersPage} />
         </div>
-      </Router>
+      </BrowserRouter>
     );
   }
 }
