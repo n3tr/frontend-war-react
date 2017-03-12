@@ -9,10 +9,10 @@ export default () => {
         <h1 className="display-3">Frontend War Room</h1>
         <p className="lead">Here you can find your allies and enemies</p>
         <hr className="my-4"/>
-        <RepoHero scopeName="facebook/react" />
+        <RepoHero scopeName="facebookincubator/create-react-app" />
       </div>
       <div className="row">
-        <RepoCard scopeName="vuejs/vue" />
+        <RepoCard scopeName="vuejs/vue-cli" />
         <RepoCard scopeName="angular/angular" />
       </div>
     </div>
