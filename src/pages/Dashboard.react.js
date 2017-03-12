@@ -1,7 +1,14 @@
 import React from 'react'
-// import RepoHero from '../components/RepoHero.react'
-import RepositoryContainer from '../containers/RepositoryContainer.react'
+import RepoHero from '../components/RepoHero.react'
+// import RepositoryContainer from '../containers/RepositoryContainer.react'
+
 import RepoCard from '../components/RepoCard.react'
+
+import applyRepositoryContainer from '../utils/applyRepositoryContainer'
+
+const RepoHeroContainer = applyRepositoryContainer(RepoHero)
+const RepoCardContainer = applyRepositoryContainer(RepoCard)
+
 export default () => {
   return (
     <div className="container">
@@ -10,11 +17,11 @@ export default () => {
         <h1 className="display-3">Frontend War Room</h1>
         <p className="lead">Here you can find your allies and enemies</p>
         <hr className="my-4"/>
-        <RepositoryContainer scopeName="facebookincubator/create-react-app" />
+        <RepoHeroContainer scopeName="facebookincubator/create-react-app" />
       </div>
       <div className="row">
-        <RepoCard scopeName="vuejs/vue-cli" />
-        <RepoCard scopeName="angular/angular" />
+        <RepoCardContainer scopeName="vuejs/vue-cli" />
+        <RepoCardContainer scopeName="angular/angular" />
       </div>
     </div>
   )

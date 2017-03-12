@@ -1,27 +1,9 @@
-// NOTE:
-// This file is unused, only use for example
-
 import React from 'react'
-import RepoHero from '../components/RepoHero.react'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import fetchRepository from '../actions/fetchRepository'
-
-class RepositoryContainer extends React.Component {
-  state = {
-    repository: {}
-  }
-
-  componentDidMount() {
-    this.props.fetch()
-  }
-
-  render() {
-    return <RepoHero repository={this.props.repository} scopeName={this.props.scopeName}/>
-  }
-}
 
 function mapStateToProps(state, ownProps) {
   const { repository } = state
@@ -39,4 +21,20 @@ function mapDispatchToProps(dispatch, ownProps) {
   }
 }
 
-connect(mapStateToProps, mapDispatchToProps)(RepositoryContainer)
+export default function applyRepositoryContainer(RepositoryInjectableComponent) {
+  class AppliedRepositoryContainer extends React.Component {
+    state = {
+      repository: {}
+    }
+
+    componentDidMount() {
+      this.props.fetch()
+    }
+
+    render() {
+      return <RepositoryInjectableComponent repository={this.props.repository} scopeName={this.props.scopeName}/>
+    }
+  }
+
+  return connect(mapStateToProps, mapDispatchToProps)(AppliedRepositoryContainer)
+}
