@@ -1,15 +1,9 @@
 import React from 'react'
-import { fetchRepository } from '../api'
 import { Link } from 'react-router-dom'
 
 class RepoHero extends React.Component {
-  state = { repo: {} }
 
-  componentDidMount() {
-    fetchRepository(this.props.scopeName).then((repo) => {
-      this.setState({ repo })
-    })
-  }
+
 
   render() {
     const {
@@ -19,7 +13,7 @@ class RepoHero extends React.Component {
       open_issues_count,
       forks_count,
       pull_requests_count
-    } = this.state.repo
+    } = this.props.repository
     console.log(this.props);
     return (
       <div>
