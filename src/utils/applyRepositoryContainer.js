@@ -23,16 +23,18 @@ function mapDispatchToProps(dispatch, ownProps) {
 
 export default function applyRepositoryContainer(RepositoryInjectableComponent) {
   class AppliedRepositoryContainer extends React.Component {
-    state = {
-      repository: {}
-    }
 
     componentDidMount() {
-      this.props.fetch()
+      if (Object.keys(this.props.repository).length === 0) {
+        this.props.fetch()
+      }
     }
 
     render() {
-      return <RepositoryInjectableComponent repository={this.props.repository} scopeName={this.props.scopeName}/>
+      return <RepositoryInjectableComponent
+        repository={this.props.repository}
+        scopeName={this.props.scopeName}
+      />
     }
   }
 
