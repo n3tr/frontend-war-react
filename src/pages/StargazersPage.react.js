@@ -1,8 +1,11 @@
 import React from 'react'
+import StargazerHeader  from '../components/StargazerHeader.react'
 import StargazerList from '../components/StargazerList.react'
 
 import { fetchStargazers } from '../api'
+import applyRepositoryContainer from '../utils/applyRepositoryContainer'
 
+const AppliedStargazerHeader = applyRepositoryContainer(StargazerHeader)
 
 export default class StargazersPage extends React.Component {
 
@@ -32,9 +35,8 @@ export default class StargazersPage extends React.Component {
     this.setState({
       fetching: true
     })
-    const { ownerName, repoName } = this.props.match.params
-    const scope = `${ownerName}/${repoName}`
-    fetchStargazers(scope, this.state.currentPage)
+
+    fetchStargazers(this.getScopeName(), this.state.currentPage)
     .then((stargazers) => {
       this.setState({
         stargazers: this.state.stargazers.concat(stargazers),
@@ -44,13 +46,16 @@ export default class StargazersPage extends React.Component {
     })
   }
 
+  getScopeName() {
+    const { ownerName, repoName } = this.props.match.params
+    const scope = `${ownerName}/${repoName}`
+    return scope
+  }
+
   render() {
     return (
       <div className="container">
-        <h1>jQuery</h1>
-        <p>
-          jQuery JavaScript Library
-        </p>
+        <AppliedStargazerHeader scopeName={this.getScopeName()} />
         <StargazerList stargazers={this.state.stargazers} />
         { this.state.fetching ? <p>Loading...</p> : null}
       </div>
