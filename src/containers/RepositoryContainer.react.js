@@ -15,6 +15,6 @@ export default class RepositoryContainer extends React.Component {
   }
 
   render() {
-    return <RepoHero repository={this.state.repository} />
+    return <RepoHero repository={this.state.repository} scopeName={this.props.scopeName}/>
   }
 }

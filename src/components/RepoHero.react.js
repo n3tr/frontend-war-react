@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 
 class RepoHero extends React.Component {
 
-
-
   render() {
     const {
       name,
