@@ -5,12 +5,12 @@ class RepoHero extends React.Component {
 
   render() {
     const {
-      name,
-      description,
-      stargazers_count,
-      open_issues_count,
-      forks_count,
-      pull_requests_count
+      name = "-",
+      description = "-",
+      stargazers_count = 0,
+      open_issues_count = 0,
+      forks_count = 0,
+      pull_requests_count = 0
     } = this.props.repository
     console.log(this.props);
     return (
