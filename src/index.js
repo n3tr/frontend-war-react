@@ -6,10 +6,10 @@ import './index.css';
 import createStore from './store/createStore'
 import { Provider } from 'react-redux'
 
-
 const store = createStore()
+
 ReactDOM.render(
-  <Provider store ={createStore()}>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')
