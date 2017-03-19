@@ -2,12 +2,12 @@
 // This file is unused, only use for example
 
 import React from 'react'
-import RepoHero from '../components/RepoHero.react'
+import RepoHero from 'components/RepoHero.react'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import fetchRepository from '../actions/fetchRepository'
+import fetchRepository from 'actions/fetchRepository'
 
 class RepositoryContainer extends React.Component {
   state = {

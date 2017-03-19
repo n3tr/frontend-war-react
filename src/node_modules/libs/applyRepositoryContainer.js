@@ -3,7 +3,7 @@ import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import fetchRepository from '../actions/fetchRepository'
+import fetchRepository from 'actions/fetchRepository'
 
 function mapStateToProps(state, ownProps) {
   const { repository } = state
