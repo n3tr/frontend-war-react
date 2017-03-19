@@ -16,12 +16,15 @@ export default class StargazersPage extends React.Component {
   }
 
   componentDidMount() {
-    window.onscroll = this._onScrollTpBottom.bind(this)
-
+    window.addEventListener('scroll', this._onScroll)
     this.fetchStargazersList()
   }
 
-  _onScrollTpBottom() {
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll)
+  }
+
+  _onScroll = () => {
     if (this.state.fetching) {
       return
     }
