@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {
-  BrowserRouter,
+  HashRouter,
   Route
 } from 'react-router-dom'
 import './App.css'
@@ -13,7 +13,7 @@ import StargazersPage from './pages/StargazersPage.react'
 class App extends Component {
   render() {
     return (
-      <BrowserRouter basename="/frontend-war-react/">
+      <HashRouter basename="/frontend-war-react/">
         <div className="App">
             <AppHeader />
 
@@ -22,7 +22,7 @@ class App extends Component {
               path="/stargazers/:ownerName/:repoName"
               component={StargazersPage} />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
