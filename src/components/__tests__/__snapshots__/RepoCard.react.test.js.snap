@@ -1,0 +1,97 @@
+exports[`RepoCard should render correctly 1`] = `
+<div
+  className="col-6">
+  <div
+    className="card">
+    <h3
+      className="card-header">
+      React
+    </h3>
+    <div
+      className="card-block">
+      <p
+        className="card-text">
+        Lib for create view
+      </p>
+      <p
+        className="card-text">
+        Stars: 
+        60000
+      </p>
+      <p
+        className="card-text">
+        Open Issues: 
+        400
+      </p>
+      <p
+        className="card-text">
+        Forks: 
+        1200
+      </p>
+      <p
+        className="card-text">
+        Pull Requests: 
+        200
+      </p>
+    </div>
+    <div
+      className="card-footer text-muted">
+      <a
+        className="btn btn-primary"
+        href="/stargazers/undefined"
+        onClick={[Function]}>
+        View enemies
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RepoCard should render empty repo object 1`] = `
+<div
+  className="col-6">
+  <div
+    className="card">
+    <h3
+      className="card-header">
+      -
+    </h3>
+    <div
+      className="card-block">
+      <p
+        className="card-text">
+        -
+      </p>
+      <p
+        className="card-text">
+        Stars: 
+        0
+      </p>
+      <p
+        className="card-text">
+        Open Issues: 
+        0
+      </p>
+      <p
+        className="card-text">
+        Forks: 
+        0
+      </p>
+      <p
+        className="card-text">
+        Pull Requests: 
+        0
+      </p>
+    </div>
+    <div
+      className="card-footer text-muted">
+      <a
+        className="btn btn-primary"
+        href="/stargazers/undefined"
+        onClick={[Function]}>
+        View enemies
+      </a>
+    </div>
+  </div>
+</div>
+`;
