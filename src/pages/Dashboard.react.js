@@ -4,7 +4,7 @@ import RepoHero from '../components/RepoHero.react'
 
 import RepoCard from '../components/RepoCard.react'
 
-import applyRepositoryContainer from '../utils/applyRepositoryContainer'
+import applyRepositoryContainer from '../libs/applyRepositoryContainer'
 
 const RepoHeroContainer = applyRepositoryContainer(RepoHero)
 const RepoCardContainer = applyRepositoryContainer(RepoCard)
