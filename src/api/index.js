@@ -5,7 +5,10 @@
 // Fetch Github api with given path
 // -
 function fetchGitHubAPIWithPath(path) {
-  return fetch(`https://api.github.com${path}`).then( res => res.json() )
+  let headers = new Headers({
+    "Authorization": `token fbedabf134e561e8515b0c939d4f7b7b17f749ff`
+  })
+  return fetch(`https://api.github.com${path}`, { headers }).then( res => res.json() )
 }
 
 // -

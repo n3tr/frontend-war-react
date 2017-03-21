@@ -1,9 +1,9 @@
 import React from 'react'
-import StargazerHeader  from '../components/StargazerHeader.react'
-import StargazerList from '../components/StargazerList.react'
+import StargazerHeader  from 'components/StargazerHeader.react'
+import StargazerList from 'components/StargazerList.react'
 
-import { fetchStargazers } from '../api'
-import applyRepositoryContainer from '../libs/applyRepositoryContainer'
+import { fetchStargazers } from 'api'
+import applyRepositoryContainer from 'libs/applyRepositoryContainer'
 
 const AppliedStargazerHeader = applyRepositoryContainer(StargazerHeader)
 

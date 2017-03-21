@@ -1,10 +1,10 @@
 import React from 'react'
-import RepoHero from '../components/RepoHero.react'
+import RepoHero from 'components/RepoHero.react'
 // import RepositoryContainer from '../containers/RepositoryContainer.react'
 
-import RepoCard from '../components/RepoCard.react'
+import RepoCard from 'components/RepoCard.react'
 
-import applyRepositoryContainer from '../libs/applyRepositoryContainer'
+import applyRepositoryContainer from 'libs/applyRepositoryContainer'
 
 const RepoHeroContainer = applyRepositoryContainer(RepoHero)
 const RepoCardContainer = applyRepositoryContainer(RepoCard)
