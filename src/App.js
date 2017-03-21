@@ -6,9 +6,9 @@ import {
 import './App.css'
 
 // Components
-import AppHeader from './components/AppHeader.react'
-import Dashboard from './pages/Dashboard.react'
-import StargazersPage from './pages/Stargazers.react'
+import AppHeader from 'components/AppHeader.react'
+import Dashboard from 'pages/Dashboard.react'
+import StargazersPage from 'pages/Stargazers.react'
 
 class App extends Component {
   render() {
