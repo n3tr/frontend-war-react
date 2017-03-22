@@ -2,27 +2,36 @@ import React from 'react'
 import RepoHero from 'components/RepoHero.react'
 // import RepositoryContainer from '../containers/RepositoryContainer.react'
 
+import AppHeader from 'components/AppHeader.react'
 import RepoCard from 'components/RepoCard.react'
 
 import applyRepositoryContainer from 'libs/applyRepositoryContainer'
 
-const RepoHeroContainer = applyRepositoryContainer(RepoHero)
 const RepoCardContainer = applyRepositoryContainer(RepoCard)
 
 export default () => {
   return (
     <div className="container">
-      <div className="jumbotron">
-        <h2 className="display-5">Welcome to</h2>
-        <h1 className="display-3">Frontend War Room</h1>
-        <p className="lead">Here you can find your allies and enemies</p>
-        <hr className="my-4"/>
-        <RepoHeroContainer scopeName="facebook/react" />
-      </div>
-      <div className="row">
-        <RepoCardContainer scopeName="vuejs/vue" />
-        <RepoCardContainer scopeName="angular/angular" />
-      </div>
+      <section className="section">
+        <h1 className="title is-1">Frontend War Room</h1>
+        <h2 className="subtitle is-3">Here you can find your allies and enemies.</h2>
+        <div className="columns is-multiline is-tablet">
+          <div className="column is-12-tablet">
+            <h1 className="title is-2">Allies</h1>
+          </div>
+
+          <RepoCardContainer scopeName="facebook/react" className="column is-12-tablet" />
+
+          <div className="column is-12-tablet">
+            <h1 className="title is-2">Enemies</h1>
+          </div>
+
+          <RepoCardContainer scopeName="vuejs/vue" className="column is-6-tablet" />
+          <RepoCardContainer scopeName="angular/angular"  className="column is-6-tablet"  />
+        </div>
+        
+        
+        </section>
     </div>
   )
 }

@@ -15,12 +15,10 @@ class App extends Component {
     return (
       <HashRouter basename="/frontend-war-react/">
         <div className="App">
-            <AppHeader />
-
-            <Route path="/" exact component={Dashboard} />
-            <Route
-              path="/stargazers/:ownerName/:repoName"
-              component={StargazersPage} />
+          <Route path="/" exact component={Dashboard} />
+          <Route
+            path="/stargazers/:ownerName/:repoName"
+            component={StargazersPage} />
         </div>
       </HashRouter>
     );

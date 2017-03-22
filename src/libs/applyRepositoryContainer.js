@@ -31,10 +31,7 @@ export default function applyRepositoryContainer(RepositoryInjectableComponent) 
     }
 
     render() {
-      return <RepositoryInjectableComponent
-        repository={this.props.repository}
-        scopeName={this.props.scopeName}
-      />
+      return <RepositoryInjectableComponent {...this.props} />
     }
   }
 

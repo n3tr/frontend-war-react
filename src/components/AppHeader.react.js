@@ -3,14 +3,10 @@ import { Link } from 'react-router-dom'
 class StickyHeader extends React.Component {
   render() {
     return (
-      <nav className="navbar navbar-toggleable-md bg-faded navbar-inverse bg-inverse">
-        <div className="container">
-          <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <Link className="navbar-brand" to="/">React War Room</Link>
-        </div>
-      </nav>
+      <div>
+        <h1 className="title is-1">Frontend War Room</h1>
+        <h2 className="subtitle is-3">Here you can find your allies and enemies.</h2>
+      </div>
     )
   }
 }
