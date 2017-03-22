@@ -28,7 +28,9 @@ export default class RepoCard extends React.Component {
             <div className="media-content">
               <div className="content">
                 <p>
-                  <strong className="title">{ name }</strong>
+                  <strong>
+                    <Link to={`/${this.props.scopeName}`} className="title">{ name }</Link>
+                  </strong>
                 </p>
                 <p className="subtitle">{ description }</p>
               </div>

@@ -1,11 +1,11 @@
 import React from 'react'
-import StargazerHeader  from 'components/StargazerHeader.react'
+import RepoCard  from 'components/RepoCard.react'
 import StargazerList from 'components/StargazerList.react'
 
 import { fetchStargazers } from 'api'
 import applyRepositoryContainer from 'libs/applyRepositoryContainer'
 
-const AppliedStargazerHeader = applyRepositoryContainer(StargazerHeader)
+const RepoCardContainer = applyRepositoryContainer(RepoCard)
 
 export default class StargazersPage extends React.Component {
 
@@ -58,10 +58,14 @@ export default class StargazersPage extends React.Component {
   render() {
     return (
       <div className="container">
-        <AppliedStargazerHeader scopeName={this.getScopeName()} />
-        <StargazerList stargazers={this.state.stargazers} />
-        { this.state.fetching ? <p>Loading...</p> : null}
-      </div>
+      <section className="section">
+          <RepoCardContainer scopeName={this.getScopeName()}  />
+          <br />
+          <StargazerList stargazers={this.state.stargazers} />
+          { this.state.fetching ? <p className="column is-12-mobile has-text-centered">Loading...</p> : null}
+      </section>
+    </div>
+      
     )
   }
 }

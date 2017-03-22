@@ -9,7 +9,7 @@ export default class StargazerList extends React.Component {
     })
 
     return (
-      <div className="row stargazers">
+      <div className="columns is-multiline is-mobile">
         { stargazersItems }
       </div>
     )

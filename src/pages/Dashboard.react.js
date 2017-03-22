@@ -13,8 +13,7 @@ export default () => {
   return (
     <div className="container">
       <section className="section">
-        <h1 className="title is-1">Frontend War Room</h1>
-        <h2 className="subtitle is-3">Here you can find your allies and enemies.</h2>
+        
         <div className="columns is-multiline is-tablet">
           <div className="column is-12-tablet">
             <h1 className="title is-2">Allies</h1>
@@ -29,9 +28,7 @@ export default () => {
           <RepoCardContainer scopeName="vuejs/vue" className="column is-6-tablet" />
           <RepoCardContainer scopeName="angular/angular"  className="column is-6-tablet"  />
         </div>
-        
-        
-        </section>
+      </section>
     </div>
   )
 }
